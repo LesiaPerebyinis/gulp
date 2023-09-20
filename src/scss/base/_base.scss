@@ -1,0 +1,19 @@
+html{
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  overflow-y: scroll;
+  background: var(--light-mode-white, #FFF);
+  font-family: 'Inter', sans-serif;
+  color: var(--light-mode-black, #282828);
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-style: normal; 
+}
+body._lock {
+  overflow: hidden;
+}
+ main {
+  margin-top: 7.5rem;
+ }

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="./css/main.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="wrapper">
+    @@include('blocks/header.html')
+<main>
+
+  <section class="intro">
+    <div class="container">
+      <div class="intro__content">
+  
+        <h1 class="intro__content-title">Запит на допомогу</h1>
+        <div class="intro__content_subtitle">
+          <p class="intro__content-text">
+            Благодійний фонд Сергія Притули опікується посиленням Сил Оборони України, а також допомогою цивільному
+            населенню, яке постраждало від російської агресії.
+          </p>
+        </div>
+  
+  
+      </div>
+  
+    </div>
+  </section>
+
+<section class="form">
+  <div class="container">
+    <div class="form__wrapper">
+      <div class="form__header">
+        <div class="form__title section-title">Відправити запит на допомогу</div>
+        <div class="form__text text">Благодійний фонд Сергія Притули опікується посиленням Сил Оборони України, а також
+          допомогою цивільному населенню, яке постраждало від російської агресії.</div>
+      </div>
+      <div class="form__form">
+        <form>
+          <div class="form__form-row">
+            <div class="form__form-column">
+              <p>
+                <label for="userName"></label>
+                <input id="userName" type="text" placeholder="Ім’я та прізвище" reguired>
+              </p>
+              <p>
+                <label for="userEmail"></label>
+                <input id="userEmail" type="email" placeholder="Email" reguired>
+
+
+              </p>
+
+
+
+            </div>
+
+            <div class="form__form-column">
+              <p>
+                <label for="userName"></label>
+                <input id="userName" type="tel" placeholder="Телефон" reguired>
+              </p>
+
+              <p>
+                <label for="userOffer"></label>
+                <input id="userOffer" type="text" placeholder="Потреба">
+              </p>
+
+
+            </div>
+
+
+          </div>
+
+          <p class="submit-wrapper">
+           <input type="submit" class="sub btn-text" value="Надіслати запит" />
+         </p>
+        </form>
+      </div>
+
+
+    </div>
+  </div>
+</section>
+
+
+  
+@@include('blocks/popup.html')
+
+</main>
+
+  
+
+    @@include('blocks/footer.html')
+
+  </div>
+ 
+
+  <script src="./js/index.bundle.js"></script>
+  
+</body>
+</html>

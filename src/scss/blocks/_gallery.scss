@@ -1,0 +1,119 @@
+.gallery {
+  padding-top: 9.375rem;
+  padding-bottom: 9.375rem;
+}
+.gallery header {
+  padding-left: 2.1875rem;
+  padding-bottom: 3.125rem;
+}
+
+.carousel {
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+}
+
+  .carousel__wrapper {
+    max-width: 70.625rem;
+    width: 100%;
+  }
+
+.carousel__wrapper .carousel__container{
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc((100% / 3) - 0.75rem);
+  gap: 1.0625rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: 0;
+}
+.carousel__container::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel__container.dragging {
+  scroll-snap-type: none;
+  scroll-behavior: auto;
+}
+
+.carousel__container.dragging .carousel__card {
+  cursor: grab;
+}
+
+
+
+
+.carousel__container .carousel__card {
+  scroll-snap-align: start;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.carousel__card .carousel__img {
+  max-width: 23rem;
+  max-height: 23rem;
+}
+
+.carousel__card .carousel__img img {
+  width: 22.5rem;
+  height: 22.5rem;
+  object-fit: cover;
+
+}
+
+.carousel__container .carousel-btn {
+  cursor: pointer;
+  position: absolute;
+  width: 3rem;
+}
+
+.carousel__wrapper {
+  position: relative;
+}
+.carousel__wrapper button{
+  position: absolute;
+  top: 50%;
+  width: 3rem;
+}
+.carousel-btn:hover{
+  opacity: 0.7;
+  border-radius: 50%;
+  background-color: #ccc;
+  padding: 0.5rem;
+}
+.carousel__wrapper button:first-child {
+  left: -3rem;
+  transform: rotate(180deg);
+}
+.carousel__wrapper button:last-child {
+  right: -3rem;
+}
+
+
+
+@media screen and (max-width: 850px) {
+  .carousel__wrapper .carousel__container {
+      grid-auto-columns: calc((100% / 2) - 9px);     
+    }
+    .carousel__card .carousel__img img {
+          width: 360px;
+          height: 360px;
+          object-fit: cover;
+   }
+}
+
+@media screen and (max-width: 600px) {
+  .carousel__wrapper .carousel__container {
+    grid-auto-columns: 100%;
+  }
+
+    .carousel__card .carousel__img {
+      max-width: 360px;
+      max-height: 360px;
+ }
+}

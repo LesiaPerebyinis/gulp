@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="./css/main.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="wrapper">
+    @@include('blocks/header.html')
+<main>
+  <section class="intro">
+    <div class="container">
+      <div class="intro__content">
+  
+        <h1 class="intro__content-title">Звіти  
+        </h1>
+        <div class="intro__content_subtitle">
+          <p class="intro__content-text">
+            Благодійний фонд Сергія Притули опікується посиленням Сил Оборони України, а також допомогою цивільному
+            населенню,
+            яке постраждало від російської агресії.
+          </p>
+
+        </div>
+  
+  
+      </div>
+  
+    </div>
+  </section>
+
+  <section class="report">
+    <div class="container">
+      <div class="report__wrapper">
+        <div class="report__column">
+          <div class="report__text">
+            Щоб отримати детальну інформацію про витраченні кошти перейдіть, будь-ласка, в одну із соціальних мереж
+          </div>
+
+        </div>
+        <div class="report__column">
+        <div class="report__buttons">
+          <div class="report__btn btn-report-border">
+            <a href="#" class="report__link-fb">Facebook</a>
+          </div>
+          <div class="report__btn btn-color ">
+          <a href="#" class="report__link-inst btn-text">Instagram</a>
+          </div>
+
+
+        </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  @@include('blocks/popup.html')
+
+</main>
+
+  
+
+
+    @@include('blocks/footer.html')
+
+  </div>
+ 
+
+  <script src="./js/index.bundle.js"></script>
+  
+</body>
+</html>

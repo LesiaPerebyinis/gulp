@@ -1,0 +1,56 @@
+.projects {
+  padding-top: 6.25rem;
+}
+
+.projects {
+  &__title {
+    padding-bottom: 3.125rem;
+  }
+
+  &__row {
+    display: flex;
+    padding-bottom: 5rem;
+  }
+
+  &__column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+  }
+
+  &__imagen {
+    flex-shrink: 0;
+  }
+
+  &__img {
+   width: 35.625rem;
+    height: 25rem;
+  }
+
+
+  &__text {
+    padding-bottom: 2.5rem;
+  }
+
+  &__button {
+    display: flex;
+      width: 16.5625rem;
+      height: 3.75rem;
+      justify-content: center;
+      align-items: center;
+  }
+}
+
+.section-subtitle {
+  color: var(--light-mode-black, #282828);
+    font-size: 1.5625rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.875rem;
+    padding-bottom: 0.625rem;
+}
+
+.column-order {
+  order: 2;
+}

@@ -1,0 +1,118 @@
+
+.mobile-nav {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   background-color: var(--light-mode-white, #FFF);
+   padding: 120px 30px 30px 30px;
+   transition: left 0.3s ease 0s;
+   overflow: auto;
+}
+
+.mobile-nav__list > li:hover{
+  border-bottom: 1px solid #282828;
+}
+
+.mobile-nav._open {
+  left: 0;
+}
+.mobile-nav a {
+  color: var(--light-mode-black, #282828);
+  font-feature-settings: 'clig' off, 'liga' off;
+}
+
+.mobile-nav__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 20px;
+  font-size: 28px;
+
+}
+
+.mobile-nav-btn {
+  display: none;
+}
+
+
+@media (max-width: 780px) {
+  .header__menu {
+    display: none;
+  }
+     .header__logo-img {
+   height: auto;
+  }
+
+  .mobile-nav-btn {
+    z-index: 10;
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 18px;
+    cursor: pointer;
+    right: 1rem;
+  }
+
+.mobile-nav-btn span,
+.mobile-nav-btn::before,
+.mobile-nav-btn:after {
+ position: absolute;
+ height: 2.3px;
+ width: 100%;
+ transition: all 0.3s easy 0s;
+background: var(--light-mode-black, #282828);
+
+}
+
+.mobile-nav-btn::before,
+.mobile-nav-btn:after{
+  content: "";
+}
+.mobile-nav-btn::before{
+  top: 0;
+}
+.mobile-nav-btn:after{
+  bottom: 0;
+}
+.mobile-nav-btn span{
+  top: 50%;
+  transform: scale(1) translate(0px, -50%);
+}
+.mobile-nav-btn._open span{
+  transform: scale(0) translate(0px, -50%);
+}
+.mobile-nav-btn._open::before{
+  top: 50%;
+  transform: rotate(-45deg) translate(0px, -50%);
+}
+.mobile-nav-btn._open::after{
+  bottom: 50%;
+  transform: rotate(45deg) translate(0px, 50%);
+}
+
+.popup-btn {
+  width: 17rem;
+  order: -1;
+  margin-left: 0;
+}
+.header__buttons {
+  justify-content: space-around;
+  width: 100%;
+}
+.popup-btn {
+  width: 33rem;
+  height: 50px;
+}
+.popup-btn,
+.language__main,
+.language__sub-link{
+  font-size: 1.5rem;
+}
+
+}
